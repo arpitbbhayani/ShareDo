@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{{=URL('static','css/style_sharedo.css')}}" />
+        <link rel="shortcut icon" href="{{=URL('static' , 'images/share_do_color.png')}}" type="image/png"/>
+        <script type="text/javascript" src="{{=URL('static' , 'js/logout.js')}}" ></script>
+		<title>Share.do</title>
+    </head>
+    <body>
+    	<header>
+	  		<div id="menu">
+               <nav>
+                <ul class="app_name">
+                    <li><img class="app_image" src="{{=URL('static' , 'images/share_do_color.png')}}"/></li>
+                    <li><a href="{{=URL('sharedo' , 'default' , 'index')}}">Share.do</a></li>
+                </ul>
+                <ul class="user_section">
+                    <!-- Why Share.do is HowTo -->
+                    <li><a href="{{=URL('sharedo' , 'howto' , 'index')}}">Why Share.do</a></li>
+                    <li>|</li>
+                    <li><a href="{{=URL('sharedo' , 'about' , 'index')}}">Developers</a></li>
+                    <li>|</li>
+					<li><a href="{{=URL('sharedo' , 'contact' , 'index')}}">Contact Us</a></li>
+                    <li>|</li>
+                    <li><a href="{{=URL('sharedo' , 'user' , 'login')}}">Login</a></li>
+                    <li>|</li>
+                    <li><a href="{{=URL('sharedo' , 'user' , 'signup')}}">Register</a></li>
+                </ul>
+               </nav>
+	  		</div>
+		</header>
+        {{include}}
+    </body>
+</html>

@@ -1,0 +1,12 @@
+{{extend 'layout_sharedo.html'}}
+{{
+response.files.insert(1, URL('static', 'css/main_index.css'))
+response.include_meta()
+response.include_files()
+}}
+
+        <div class="content centered">
+            <img src="{{=URL('static','images/main.png')}}" alt="" />
+            <h1>A better way to share on social media.</h1>
+			<input type="submit" value="Get Started" onclick="window.location.href='/sharedo/user/signup';"/>
+        </div>

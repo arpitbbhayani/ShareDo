@@ -1,0 +1,25 @@
+{{
+response.files.insert(0, URL('static', 'js/jquery.js'))
+response.files.insert(1, URL('static', 'js/oauth_io.js'))
+response.files.insert(1, URL('static', 'js/user_profile.js'))
+response.files.insert(1, URL('static', 'css/user_profile.css'))
+response.include_meta()
+response.include_files()
+}}
+
+{{extend 'user/layout_user.html'}}
+<div class="content">
+
+	<form method="post" enctype="multipart/form-data" id="login_form">
+		<div class="form_row">
+			Nickname
+			<input type="text" name="name" id="name" value="{{=name}}" readonly="readonly" class="readonly"/>
+		</div><br/>
+		<div class="form_row">
+			Registered email id
+			<input type="text" name="email_id" id="email_id" value="{{=email_id}}" readonly="readonly" class="readonly" />
+		</div><br/>
+		<center><input type="submit" value="Save"/></center>
+	</form>
+
+</div>

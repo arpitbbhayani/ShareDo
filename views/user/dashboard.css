@@ -1,0 +1,75 @@
+* {
+	margin: 0;
+	border: 0;
+
+	color : rgba(57, 153, 115, 1);
+}
+
+body {
+	width: 100%;
+	background-color: #FFFFFF;
+}
+
+header , footer {
+	width: 100%;
+	position: fixed;
+	background-color: rgba(57, 153, 115, 1);
+}
+
+header > h1 {
+	color: #ffffff;
+	font-size: 32px;
+	font-family: "Roboto Slab";
+	font-style: normal;
+	margin-left: 20px;
+	padding: 5px;
+}
+
+
+.input {
+	padding-top: 100px;
+	font-family: arial;
+	font-size: 24px;
+	margin-left: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+input[type="text"],input[type="password"] {
+    font-family: cursive , arial , monospace;
+    font-weight: bold;
+    font-size: 24px;
+    outline:none;
+
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+
+    border:1px solid rgba(0,0,0, 0.2);
+    margin-top: 10px;
+
+    width: 30%;
+    text-indent: 5px;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(57, 153, 115, 1);
+    -webkit-box-shadow: 0 0 5px rgba(57, 153, 115, 1);
+    -moz-box-shadow: 0 0 5px rgba(57, 153, 115, 1);
+    border:1px solid rgba(57, 153, 115, 1);
+}
+
+input[type=button] {
+    font-family: arial;
+    font-size: 24px;
+    width: 15%;
+    padding: 10px;
+    background-color: rgba(57, 153, 115, 1);
+    color: #ffffff;
+    margin: 10px;
+}
+

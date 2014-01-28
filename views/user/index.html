@@ -1,0 +1,75 @@
+{{
+response.files.insert(0, URL('static', 'js/jquery.js'))
+response.files.insert(1, URL('static', 'js/oauth_io.js'))
+response.files.insert(1, URL('static', 'js/user_index.js'))
+
+response.include_meta()
+response.include_files()
+}}
+
+{{extend 'user/layout_user.html'}}
+<div class="content">
+
+	<!--a href="#" id="blink">Apply Blinks!</a-->
+
+	<div id="blinks">
+
+		<!--div id="greeting">
+			<img title="{{=session.name}}" class="greeting_icon" src="/sharedo/static/images/share_do_color.png" />
+			<h1>Hi, {{=session.name}} !</h1>
+		</div-->
+
+		<div id="user_blinks">
+			<div class="single_blink" id="add_a_blink">
+				<div class="single_blink_text" onclick="add_a_blink();">Add a Blink</div>
+			</div>
+			<!-- ----------------------------------------- Add blink ----------------------------------------- -->
+			<div class="blink single_blink" id="add_blink">
+				<strong><div id="availability" class="centered error"></div></strong><br/>
+				<div class="select_one">
+					When to do ?</br>
+					<input type="radio" id="event_radio_fb" name="group" onclick="provider_selected('event_facebook');"/>
+					<label for="event_radio_fb" class="facebook"></label>
+					<input type="radio" id="event_radio_tw" name="group" onclick="provider_selected('event_twitter');"/>
+					<label for="event_radio_tw" class="twitter"></label>
+					<input type="radio" id="event_radio_in" name="group" onclick="provider_selected('event_instagram');"/>
+					<label for="event_radio_in" class="instagram"></label>
+				</div>
+				<div id="event_message"></div><br/>
+					<hr/>
+				<div class="select_one">
+					What to do ?</br>
+					<input type="radio" id="action_radio_fb" name="group" onclick="provider_selected('action_facebook');"/>
+					<label for="action_radio_fb" class="facebook"></label>
+					<input type="radio" id="action_radio_tw" name="group" onclick="provider_selected('action_twitter');"/>
+					<label for="action_radio_tw" class="twitter"></label>
+				</div>
+				<div id="action_message"></div>
+				<br/>
+				<div class="centered">
+					<input type="submit" value="Save Blink" onclick="save_blink();"/>
+					<input type="submit" value="Cancel" onclick="cancel_blink();"/>
+				</div>
+			</div>
+			<!-- ----------------------------------------- Add blink ----------------------------------------- -->
+
+			{{for i in blink_details:}}
+
+			<div class="single_blink">
+				<div class="single_blink_text">
+					When {{=i['event']['one_liner']}} on <img title="{{=i['event']['provider']}}" class="provider_icon" src="/sharedo/static/images/social_icon/active/{{=i['event']['provider']}}.png" alt="{{=i['event']['provider']}}"/> then post it on <img title="{{=i['action']['provider']}}" class="provider_icon" src="/sharedo/static/images/social_icon/active/{{=i['action']['provider']}}.png" alt="{{=i['action']['provider']}}"/>
+					<a class="action_buttons {{=i['id']}}" onclick = "act(this , 'apply');" >&#10003;</a>
+					<a class="action_buttons {{=i['id']}}" onclick = "act(this , 'delete');">&#10007;</a>
+				</div>
+			</div>
+
+			{{pass}}
+		</div>
+
+
+	</div>
+
+
+
+
+</div>

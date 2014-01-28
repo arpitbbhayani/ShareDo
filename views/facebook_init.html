@@ -1,0 +1,30 @@
+<div id="fb-root"></div>
+{{
+    #@TODO: put these somewhere global
+    facebook_appid = ''
+    facebook_secret = ''
+}}
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({appId: '{{=facebook_appid}}', status: true, cookie: true,
+             xfbml: true});
+  };
+  (function() {
+    var e = document.createElement('script'); e.async = true;
+    e.src = document.location.protocol +
+      '//connect.facebook.net/en_US/all.js';
+    document.getElementById('fb-root').appendChild(e);
+  }());
+</script>
+
+<script>
+fblogin = function() {FB.login(function(response) {
+  if (response.session) {
+    window.location='{{=URL(r=request, c='auth_ext', f='facebook')}}'
+ } else {
+    // user is not logged in
+    window.location='{{=URL(r=request, c='auth_ext', f='denied')}}'
+}
+}, {perms:'email'});};
+</script>

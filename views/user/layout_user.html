@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{{=URL('static','css/style_user.css')}}" />
+        <link rel="shortcut icon" href="{{=URL('static' , 'images/share_do_color.png')}}" type="image/png"/>
+        <script type="text/javascript" src="{{=URL('static' , 'js/logout.js')}}" ></script>
+		<title>Share.do</title>
+    </head>
+    <body>
+    	<header>
+	  		<div id="menu">
+               <nav>
+                <ul class="app_name">
+                    <li><img class="app_image" src="{{=URL('static' , 'images/share_do_color.png')}}"/></li>
+                    <li><a href="{{=URL('sharedo' , 'default' , 'index')}}">Share.do</a></li>
+                </ul>
+                <ul class="user_section">
+					<li><a href="{{=URL('sharedo' , 'contact' , 'index')}}">Contact Us</a></li>
+                    <li>|</li>
+                    <li><a href="{{=URL('sharedo' , 'user' , 'profile')}}">{{=session.name}}</a></li>
+                    <li>|</li>
+                    <li class = "link" onclick="user_logout();">Logout</li>
+                </ul>
+               </nav>
+	  		</div>
+		</header>
+        {{include}}
+    </body>
+</html>

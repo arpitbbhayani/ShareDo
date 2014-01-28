@@ -1,0 +1,27 @@
+# Error messages
+ERR_FATAL = "Fatal Error!"
+ERR_INVALID_USER = "Invalid username or password!"
+
+DIGEST_KEY = "AxDrGh"
+DIGEST_ALG = "pbkdf2(1000,20,sha512)"
+
+# HTTP errors
+HTTP_METHOD_NOT_ALLOWED = 405
+HTTP_NOT_ACCEPTABLE = 406
+HTTP_SERVER_ERROR = 500
+
+# Request Methods
+REQ_METHOD_GET = 'GET'
+REQ_METHOD_POST = 'POST'
+
+# Provider names
+PROVIDER_TWITTER = 'twitter'
+PROVIDER_FB = 'facebook'
+PROVIDER_INSTAGRAM = 'instagram'
+PROVIDER_DROPBOX = 'dropbox'
+PROVIDER_LIST = [PROVIDER_TWITTER, PROVIDER_FB, PROVIDER_INSTAGRAM, PROVIDER_DROPBOX]
+
+# Event types
+TYPE_COPY = 'copy'
+TYPE_HASH = 'hash'
+TYPE_LINK = 'link'

@@ -1,0 +1,23 @@
+img {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	
+}
+.dev {
+	display: inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.content {
+	text-align: center;
+	padding-top: 75px;
+}
+
+.developer {
+	margin-top: 10px;
+	color: #2580a2;
+	font-family: arial , sans-serif;
+	font-size: 32px;
+}

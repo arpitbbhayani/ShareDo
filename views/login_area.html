@@ -1,0 +1,24 @@
+  <div id="loginError"
+  {{if response.flash:}}
+  style="display:block;"
+  {{else:}}
+  style="display:none;"
+  {{pass}}
+  >{{=response.flash or ""}}</div>
+
+  <div>
+    Connect to with Facebook, Twitter, or Google:
+  </div>
+
+  <div id="login_icons">
+    <a onclick="fblogin();">Login with Facebook</a>
+    <a href="{{=URL(r=request, c='auth_ext', f='twitter')}}">Login with Twitter</a>
+    <a href="{{=URL(r=request, c='auth_ext', f='google')}}">Login with Google</a>
+  </div>
+  {{include 'facebook_init.html'}}
+  
+  <div>
+    Login with your Local account:
+  </div>
+
+  {{=BEAUTIFY(login_form)}}

@@ -1,0 +1,109 @@
+.content {
+	padding-top: 20px;
+	font-family: arial;
+	font-size: 16px;
+	width: 100%;
+}
+
+input[type="text"],input[type="password"] {
+	font-family: arial , monospace , 'sans serif';
+	font-size: 16px;
+	outline:none;
+
+	transition: all 0.25s ease-in-out;
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+
+	border-radius:3px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+
+	border:1px solid rgba(0,0,0, 0.2);
+
+	position: relative;
+	text-indent: 5px;
+	width: 300px;
+	float:right;
+	right: 10px;
+	display: inline;
+
+}
+
+input:focus {
+	box-shadow: 0 0 5px rgba(57, 153, 115, 1);
+	-webkit-box-shadow: 0 0 5px rgba(57, 153, 115, 1);
+	-moz-box-shadow: 0 0 5px rgba(57, 153, 115, 1);
+	border:1px solid rgba(57, 153, 115, 1);
+}
+
+
+input[type=submit] {
+
+	font-family: arial;
+	font-size: 16px;
+	width: 100px;
+	height: 30px;
+
+	color: #2580a2;
+	background-color: #ffffff;
+
+	position: relative;
+	margin: auto;
+
+	transition: all 0.20s ease-in-out;
+	-webkit-transition: all 0.20s ease-in-out;
+	-moz-transition: all 0.20s ease-in-out;
+
+	cursor: pointer;
+
+	border: 1px solid #2580a2;
+
+
+	box-shadow: none;
+
+}
+
+.form_row {
+	margin: auto;
+}
+
+input[type=submit]:hover {
+	color: #000000;
+}
+
+img {
+	width: 100px;
+	height: 100px;
+	text-align: center;
+}
+
+.cong > h2 {
+	font-weight: normal;
+}
+
+form {
+
+	width: 470px;
+	height: 130px;
+	margin: auto;
+	padding-top: 10px;
+}
+
+div .error{
+	font-size: 13px;
+	color: red;
+}
+
+div .ok{
+	font-size: 13px;
+	color: green;
+}
+
+.cong {
+	text-align: center;
+}
+
+#availability {
+	padding-top: 10px;
+	height: 13px;
+}

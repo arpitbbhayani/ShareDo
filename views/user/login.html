@@ -1,0 +1,23 @@
+{{
+response.files.insert(0, URL('static', 'js/jquery.js'))
+response.files.insert(1, URL('static', 'css/login_signup.css'))
+response.files.insert(2, URL('static', 'js/login.js'))
+response.include_meta()
+response.include_files()
+}}
+
+{{extend 'layout_sharedo.html'}}
+
+    <div class="content">
+        <div class="cong">
+            <img src="{{=URL('static' , 'images/share_do_color.png')}}"/>
+            <h2>Go ahead and blink</h2>
+        </div>
+
+        <strong><div id="availability" class="centered error">{{=error}}</div></strong><br/>
+        <form method="post" enctype="multipart/form-data" id="login_form">
+            <div class="form_row">Nickname/Email<input type="text" name="email_id" id="email_id" ></input></div><br/>
+            <div class="form_row">Password<input type="password" name="pass_c" id="pass_c" ></input></div><br/>
+            <center><input type="submit" value="Sign in"/></center>
+        </form>
+	</div>

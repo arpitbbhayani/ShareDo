@@ -1,0 +1,14 @@
+{{
+response.files.insert(1, URL('static', 'css/construction.css'))
+
+response.include_meta()
+response.include_files()
+}}
+
+{{extend 'user/layout_user.html'}}
+<div class="content">
+	<div class="cong">
+		<img src="{{=URL('static' , 'images/share_do_color.png')}}"/>
+		<h2>This page is under development</h2>
+	</div>
+</div>

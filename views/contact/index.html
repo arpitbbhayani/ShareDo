@@ -1,0 +1,25 @@
+{{
+response.files.insert(0, URL('static', 'js/jquery.js'))
+response.files.insert(1, URL('static', 'css/contact.css'))
+response.files.insert(2, URL('static', 'js/contact.js'))
+
+response.include_meta()
+response.include_files()
+}}
+
+{{extend 'user/layout_user.html'}}
+
+    <div class="content">
+        <div class="cong">
+            <img src="{{=URL('static' , 'images/share_do_color.png')}}"/>
+            <h2>Contact us</h2>
+        </div>
+
+        <form method="post" enctype="multipart/form-data">
+            <div class="form_row">From<input type="text" name="email_id" id="from"/></div><br/>
+            <div class="form_row">Subject<input type="text" name="subject" id="subject"/></div><br/>
+            <div class="form_row">Body<textarea rows="4" cols="50" name="body" id="body"></textarea></div><br/>
+			<center><div class="form_row"><br/><br/><br/><br/><br/><br/><br/><br/><br/></br><input type="submit" class="theme" value="Send" id="send_email" onclick="return email();"/></div></center>
+        </form>
+
+	</div>
